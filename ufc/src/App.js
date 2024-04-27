@@ -9,36 +9,24 @@ import EditPost from './pages/EditPost';
 
 const App = () => {
   
+  const date = '2024-04-12'
   const descr = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+
 
   const posts = [
       {'id':'1', 
-      'Name': 'da creator',
-      'Element': 'Fire',
-      'Strength': '10',
-      'Speed': '10',
-      'Health': '10', 
+      'Date': date,
+      'Name': 'da creator',  
       'Description': descr},
       {'id':'2', 
+      'Date': date,
       'Name': 'da element',
-      'Element': 'Water',
-      'Strength': '5',
-      'Speed': '10',
-      'Health': '8', 
       'Description': descr},
       {'id':'3', 
-      'Name': 'da creator',
-      'Element': 'Fire',
-      'Strength': '10',
-      'Speed': '10',
-      'Health': '10', 
+      'Date': date,
       'Description': descr},
       {'id':'4', 
-      'Name': 'da creator',
-      'Element': 'Fire',
-      'Strength': '10',
-      'Speed': '10',
-      'Health': '10', 
+      'Date': date,
       'Description': descr},
   ]
  

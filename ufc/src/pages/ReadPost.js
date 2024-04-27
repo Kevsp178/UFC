@@ -9,7 +9,7 @@ const ReadPosts = (props) => {
     useEffect(() => {
         const fetchPosts = async () => {
             const {data} = await supabase
-                .from('Posts')
+                .from('Forum')
                 .select();
 
             // set state of posts
@@ -25,7 +25,7 @@ const ReadPosts = (props) => {
             {
                 posts && posts.length > 0 ?
                 posts.map((post,index) => 
-                   <Card id={post.id} Name={post.Name} Element={post.Element} Health={post.Health} Strength={post.Strength} Speed={post.Speed} Description={post.Description}/>
+                   <Card id={post.id} Name={post.Name} Description={post.Description} Date={post.Date}/>
                 ) : <h2>{}</h2>
             }
         </div>  
