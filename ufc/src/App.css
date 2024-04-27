@@ -1,38 +1,64 @@
 .App {
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: calc(10px + 2vmin);
+  color: rgb(7, 7, 7);
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+
+}
+
+.header {
+  width: 100%;
+  color: rgb(13, 13, 14);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.headerBtn {
+  margin-bottom: 50px;
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ReadPosts {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f8f6f6;
+  color: rgb(8, 8, 8);
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: rebeccapurple;
+}
+
+.figure {
+  max-width: 300px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-content: center;
+  align-self: end;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
