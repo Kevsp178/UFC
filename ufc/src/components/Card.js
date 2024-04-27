@@ -106,6 +106,7 @@ const handleCommentChange = (event) => {
         <img className="moreButton" alt="edit button" src={more} />
       </Link>
       <h2 className="title">Created By: {props.Name}</h2>
+      <h2 className="title"> {props.Title}</h2>
       <p className="description"> {props.Description}</p>
       <h3 className="date">Created on: {props.Date}</h3>
 

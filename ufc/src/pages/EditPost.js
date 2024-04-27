@@ -7,7 +7,7 @@ import { supabase } from '../client'
 const EditPost = ({data}) => {
 
     const {id} = useParams();
-    const [post, setPost] = useState({id: null, title: "", author: "", description: ""});
+    const [post, setPost] = useState({id: null, Title: "", Name: "", Description: ""});
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -26,6 +26,7 @@ const EditPost = ({data}) => {
             .from('Forum')
             .update({Name: post.Name,
                     Date: post.Date,
+                    Title:post.Title,
                     Description: post.Description})
             .eq('id', id);
 
@@ -48,6 +49,8 @@ const EditPost = ({data}) => {
             <form>
                
                 <input placeholder='Username' type="text" id="Name" name="Name" onChange={handleChange} /><br />
+                <br/>
+                <input placeholder='Title of your Post' type="text" id="Title" name="Title" onChange={handleChange} /><br />
                 <br/>
                 
                 <textarea placeholder='Drop Knowledge' rows="5" cols="50" id="Description" name = "Description" onChange={handleChange}>
