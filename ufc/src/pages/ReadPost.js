@@ -26,7 +26,7 @@ const ReadPosts = (props) => {
                 posts && posts.length > 0 ?
                 posts.map((post,index) => 
                    <Card id={post.id} Name={post.Name} Element={post.Element} Health={post.Health} Strength={post.Strength} Speed={post.Speed} Description={post.Description}/>
-                ) : <h2>{'No Team Members yet 😞'}</h2>
+                ) : <h2>{}</h2>
             }
         </div>  
     )

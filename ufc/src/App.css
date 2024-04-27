@@ -4,15 +4,56 @@
   font-style: normal;
   font-size: calc(10px + 2vmin);
   color: rgb(7, 7, 7);
-  justify-content: center;
   padding: 20px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  background-color: red;
+  align-items: center;
+  background-image: url('ring.jpg');
+  background-size: cover;
+  /* Ensures the image covers the entire container */
+  background-position: center;
+  /* Centers the image within the container */
+}
 
+/* Style for the side-by-side divs */
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow flex items to wrap to next line if needed */
+}
+
+/* Style for individual divs */
+.side-by-side>div {
+  flex: 5%;
+  /* Each div takes up equal space */
+  margin: 20%;
+  /* Add some spacing between divs */
+}
+
+.side-by-side > .Champions{
+  margin-right: auto;
+}
+
+.Champions{
+  background-color: rgba(128, 128, 128, 0.2);
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-weight: 50;
+  font-style: normal;
+  font-size: calc(5px + 2vmin);
+  color: gold;
+  max-width: 250px;
+  margin: 2px !important;
+  
+  overflow-y:  auto;
+    /* Enable vertical scroll */
+  
+  max-height: 1000px;
+    /* Set maximum height for the scrollable area */
+    
+}
+
+.Champs{
+  max-width: 200px;
 }
 
 .header {
