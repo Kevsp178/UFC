@@ -51,9 +51,6 @@ const Card = (props) =>  {
   return (
       <div className="Card">
           <Link to={'edit/'+ props.id}><img className="moreButton" alt="edit button" src={more} /></Link>
-          <img className = "figure"
-            src = "https://tse2.mm.bing.net/th?id=OIP.18svcq71ttMpnvFING4HmgHaHQ&pid=Api&P=0&h=180"
-            alt="React Image"/>
           <h2 className="title">Name: {props.Name}</h2>
           <h3 className="author">Element: {props.Element}</h3>
           <h3 className="author"> Health: {props.Health}</h3>
