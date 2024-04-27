@@ -16,7 +16,7 @@
 }
 
 .title {
-    color: white;
+    color: gold;
     padding-left: 30px;
     font-size: 24px;
 }
@@ -28,7 +28,7 @@
 }
 
 .description {
-    color: white;
+    color: gold;
     text-align: justify;
     text-justify: inter-word;
     padding-left: 30px;

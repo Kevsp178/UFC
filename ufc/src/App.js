@@ -11,23 +11,28 @@ const App = () => {
   
   const date = '2024-04-12'
   const descr = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  const comm = 'Lorem  dolor sit , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
 
 
   const posts = [
       {'id':'1', 
       'Date': date,
       'Name': 'da creator',  
-      'Description': descr},
+      'Description': descr,
+       'comment': comm},
       {'id':'2', 
       'Date': date,
       'Name': 'da element',
-      'Description': descr},
+      'Description': descr,
+      'comment': comm},
       {'id':'3', 
       'Date': date,
-      'Description': descr},
+      'Description': descr,
+      'comment': comm},
       {'id':'4', 
       'Date': date,
-      'Description': descr},
+      'Description': descr,
+      'comment': comm},
   ]
  
 

@@ -10,10 +10,12 @@ import { supabase } from '../client'
 const Card = (props) =>  {
 
   const [count, setCount] = useState(0)
-  const [randomImage, setRandomImage] = useState('');
    const dateObject = new Date(props.Date);
   // Extract the date in the format YYYY-MM-DD
   const formattedDate = dateObject.toISOString().split('T')[0];
+  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState([]);
+  
 
   useEffect(() => {
     const getCount = async () => {
@@ -37,7 +39,25 @@ const Card = (props) =>  {
     getCount();
     
 
-  }, [props]);
+  // Fetch comments
+    const getComments = async () => {
+      const { data, error } = await supabase
+        .from('Comment')
+        .select()
+        .eq('postId', props.id);
+
+      if (error) {
+        console.error('Error fetching comments:', error.message);
+        return;
+      }
+
+      if (data) {
+        setComments(data);
+      }
+    };
+
+    getComments();
+  }, [props.id]);
   
 
   const updateCount = async (event) => {
@@ -51,17 +71,62 @@ const Card = (props) =>  {
   setCount((count) => count + 1);
 }
 
-  return (
-      <div className="Card">
-          <Link to={'edit/'+ props.id}><img className="moreButton" alt="edit button" src={more} /></Link>
-          <h2 className="title">Created By: {props.Name}</h2>
-          <p className="description">Description: {props.Description}</p>
-          <h3 className="description">Created on: {formattedDate}</h3>
-          
+const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
 
-          <button className="betButton" onClick={updateCount} style={{marginRight:"1px"}}>👍 Like Post {count}</button>
-          
+  const handleCommentSubmit = async (event) => {
+    event.preventDefault();
+
+    if (comment.trim() === '') {
+      return;
+    }
+
+    const { data, error } = await supabase.from('Comment').insert([{ postId: props.id, comment: comment.trim() }]);
+    if (error) {
+      console.error('Error adding comment:', error.message);
+      return;
+    }
+
+    if (data) {
+      setComments([...comments, data[0]]);
+      setTimeout(() => {
+         setComment('');
+      }, 0);
+      setComments('');
+    }
+  };
+
+
+
+
+  return (
+       <div className="Card">
+      <Link to={'edit/' + props.id}>
+        <img className="moreButton" alt="edit button" src={more} />
+      </Link>
+      <h2 className="title">Created By: {props.Name}</h2>
+      <p className="description">Description: {props.Description}</p>
+      <h3 className="description">Created on: {props.Date}</h3>
+
+      <button className="betButton" onClick={updateCount} style={{ marginRight: '1px' }}>
+        👍 Like Post {count}
+      </button>
+
+      <form onSubmit={handleCommentSubmit}>
+        <input type="text" value={comment} onChange={handleCommentChange} placeholder="Add a comment..." />
+        <button type="submit">Submit</button>
+      </form>
+
+      <div>
+        <h4>Comments:</h4>
+        {comments.map((commentData) => (
+          <div key={commentData.id}>
+            <p className='cbox'>{commentData.comment}</p>
+          </div>
+        ))}
       </div>
+    </div>
   );
 };
 
