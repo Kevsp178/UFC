@@ -106,26 +106,31 @@ const handleCommentChange = (event) => {
         <img className="moreButton" alt="edit button" src={more} />
       </Link>
       <h2 className="title">Created By: {props.Name}</h2>
-      <p className="description">Description: {props.Description}</p>
-      <h3 className="description">Created on: {props.Date}</h3>
+      <p className="description"> {props.Description}</p>
+      <h3 className="date">Created on: {props.Date}</h3>
 
-      <button className="betButton" onClick={updateCount} style={{ marginRight: '1px' }}>
-        👍 Like Post {count}
-      </button>
+     
+     <div className='Buttonss'>
 
       <form onSubmit={handleCommentSubmit}>
         <input type="text" value={comment} onChange={handleCommentChange} placeholder="Add a comment..." />
         <button type="submit">Submit</button>
+        <button className="betButton" onClick={updateCount} style={{ marginRight: '1px', marginLeft: '10px' }}>
+        {count} Likes 👍 
+      </button>
       </form>
 
-      <div>
-        <h4>Comments:</h4>
+       
+      </div>
+
+     
+        <h6>Comments:</h6>
         {comments.map((commentData) => (
-          <div key={commentData.id}>
+          <div className='cont' key={commentData.id}>
             <p className='cbox'>{commentData.comment}</p>
           </div>
         ))}
-      </div>
+      
     </div>
   );
 };

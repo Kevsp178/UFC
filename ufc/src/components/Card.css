@@ -1,14 +1,14 @@
 .Card {
     backdrop-filter: blur(2px);
-    border: 15px solid rgba(89, 4, 248, 0.497);
+    border: 5px solid rgba(232, 250, 74, 0.497);
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     width: 600px;
     text-align: left;
-    background-color: #1a1a1a;
+    background-color: rgba(128, 128, 128, 0.8);
     margin-right: 10px;
     
    
@@ -33,9 +33,22 @@
     text-justify: inter-word;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 20px;
-    font-size: 15px;
+    margin-bottom: 2px;
+    font-size: 25px;
 }
+.date{
+    font-size: 10px;
+    padding-left: 30px;
+}
+
+.Buttonss {
+    display: flex;
+    /* Use flexbox layout */
+    justify-content:flex-start
+    /* Align items to the end of the container */
+}
+
+/* Style for individual buttons */
 
 
 
@@ -48,4 +61,13 @@
 
 .moreButton:hover {
     cursor: pointer;
+}
+
+.cont{
+    font-size: 10px;
+}
+
+.cbox{
+    font-size: 15px;
+    margin-left: 10px;
 }
