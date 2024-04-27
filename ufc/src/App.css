@@ -3,9 +3,9 @@
   font-weight: 100;
   font-style: normal;
   font-size: calc(10px + 2vmin);
-  color: rgb(7, 7, 7);
+  color: rgb(233, 7, 7);
   padding: 20px;
-  display: flex;
+  display:flexbox;
   justify-content: center;
   align-items: center;
   background-image: url('ring.jpg');
@@ -26,7 +26,7 @@
 .side-by-side>div {
   flex: 5%;
   /* Each div takes up equal space */
-  margin: 20%;
+  margin: 10%;
   /* Add some spacing between divs */
 }
 
@@ -57,8 +57,8 @@
 }
 
 .header {
-  width: 100%;
-  color: rgb(13, 13, 14);
+  width: 50%;
+  color: gold;
   text-align: center;
 }
 

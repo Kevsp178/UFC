@@ -158,7 +158,6 @@ const App = () => {
             <br></br>
 
           
-          
         </div>
       
 
@@ -166,20 +165,25 @@ const App = () => {
           <h1>Welcome to the UFC 
           </h1>
         
-          <Link to="/"><button className="headerBtn"> Explore your knights  </button></Link>
-          <Link to="/new"><button className="headerBtn"> Create a Fourm </button></Link>
+
 
           <div >
             <img className = "figure"
-             src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/17d847e9-6099-49ec-9029-b88eefdcb494/daxul94-e0e1c17c-23cb-4483-8839-36f845db491e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3ZDg0N2U5LTYwOTktNDllYy05MDI5LWI4OGVlZmRjYjQ5NFwvZGF4dWw5NC1lMGUxYzE3Yy0yM2NiLTQ0ODMtODgzOS0zNmY4NDVkYjQ5MWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HMuxLNXQPRATtwjjGqa2KDe_jM3etwjmlXR1Yt5VlOw"
+             src = "https://i.ytimg.com/vi/IJVQMYRm5jw/maxresdefault.jpg"
               alt="React Image"/>
           </div>
+          <Link to="/"><button className="headerBtn"> View Other Post  </button></Link>
+          <Link to="/new"><button className="headerBtn"> Create a Post </button></Link>
+
+          {element}
         </div>
       
-        {element}
+        
      
         
       </div>
+
+      
     </div>
 
   );
